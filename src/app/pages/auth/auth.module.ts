@@ -1,22 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthRoutingModule } from './auth-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [LoginComponent, RegistrationComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    CommonModule,
+    AuthRoutingModule,
     ClarityModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
@@ -36,6 +36,6 @@ import { ToastrModule } from 'ngx-toastr';
     })
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: []
 })
-export class AppModule {}
+export class AuthModule {}
