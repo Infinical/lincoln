@@ -8,6 +8,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 })
 export class InviteSupervisorComponent implements OnInit {
   inviteForm: FormGroup;
+  loading: any;
 
   constructor(private fb: FormBuilder) {}
 

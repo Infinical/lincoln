@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class AmbassadorComponent implements OnInit {
   email: string;
   loading: boolean;
+  collapsed: any;
   constructor(
     private authService: AuthService,
     private toastr: ToastrService,
