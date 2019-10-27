@@ -7,9 +7,10 @@ import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 @NgModule({
-  declarations: [AdminComponent],
+  declarations: [AdminComponent, ProjectsComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

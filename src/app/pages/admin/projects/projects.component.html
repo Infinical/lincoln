@@ -1,0 +1,19 @@
+<clr-datagrid>
+  <clr-dg-column>ID</clr-dg-column>
+  <clr-dg-column>Project Name</clr-dg-column>
+  <clr-dg-column>Start Date</clr-dg-column>
+  <clr-dg-column>End Date</clr-dg-column>
+  <clr-dg-column>View</clr-dg-column>
+  <clr-dg-column>Download</clr-dg-column>
+
+  <clr-dg-row *ngFor="let project of projects">
+    <clr-dg-cell>{{ project.id }}</clr-dg-cell>
+    <clr-dg-cell>{{ project.name }}</clr-dg-cell>
+    <clr-dg-cell>{{ project.start_date }}</clr-dg-cell>
+    <clr-dg-cell>{{ project.end_date }}</clr-dg-cell>
+    <clr-dg-cell><clr-icon shape="eye"></clr-icon></clr-dg-cell>
+    <clr-dg-cell><clr-icon shape="download"></clr-icon></clr-dg-cell>
+  </clr-dg-row>
+
+  r>
+</clr-datagrid>
