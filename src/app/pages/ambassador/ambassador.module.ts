@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
+import { AmbassadorComponent } from './ambassador.component';
+import { AmbassadorRoutingModule } from './ambassador-routing.module';
 import { ClarityModule } from '@clr/angular';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AuthRoutingModule } from './auth-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './registration/registration.component';
 import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [LoginComponent, RegistrationComponent],
+  declarations: [AmbassadorComponent],
   imports: [
     CommonModule,
-    AuthRoutingModule,
+    AmbassadorRoutingModule,
     ClarityModule,
     HttpClientModule,
     ReactiveFormsModule,
@@ -33,8 +31,6 @@ import { ToastrModule } from 'ngx-toastr';
       closeButton: true,
       preventDuplicates: false
     })
-  ],
-  providers: [],
-  bootstrap: []
+  ]
 })
-export class AuthModule {}
+export class AmbassadorModule {}
