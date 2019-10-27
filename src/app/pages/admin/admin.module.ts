@@ -8,9 +8,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
-  declarations: [AdminComponent, ProjectsComponent],
+  declarations: [AdminComponent, ProjectsComponent, UsersComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,

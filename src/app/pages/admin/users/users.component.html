@@ -1,0 +1,15 @@
+<clr-datagrid>
+  <clr-dg-column>ID</clr-dg-column>
+  <clr-dg-column>Username</clr-dg-column>
+  <clr-dg-column>Email</clr-dg-column>
+  <clr-dg-column>Role</clr-dg-column>
+  <clr-dg-column>View</clr-dg-column>
+
+  <clr-dg-row *ngFor="let user of users">
+    <clr-dg-cell>{{ user.id }}</clr-dg-cell>
+    <clr-dg-cell>{{ user.username }}</clr-dg-cell>
+    <clr-dg-cell>{{ user.email }}</clr-dg-cell>
+    <clr-dg-cell>{{ user.role }}</clr-dg-cell>
+    <clr-dg-cell><clr-icon shape="eye"></clr-icon></clr-dg-cell>
+  </clr-dg-row>
+</clr-datagrid>
