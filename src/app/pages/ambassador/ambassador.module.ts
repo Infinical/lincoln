@@ -8,7 +8,6 @@ import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 
-import { NgxDropzoneModule } from 'ngx-dropzone';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
@@ -16,7 +15,13 @@ import { InviteSupervisorComponent } from './invite-supervisor/invite-supervisor
 import { MyProfileComponent } from './my-profile/my-profile.component';
 
 @NgModule({
-  declarations: [AmbassadorComponent, CreateProjectComponent, ViewProjectsComponent, InviteSupervisorComponent, MyProfileComponent],
+  declarations: [
+    AmbassadorComponent,
+    CreateProjectComponent,
+    ViewProjectsComponent,
+    InviteSupervisorComponent,
+    MyProfileComponent
+  ],
   imports: [
     CommonModule,
     AmbassadorRoutingModule,
@@ -38,7 +43,7 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
       closeButton: true,
       preventDuplicates: false
     }),
-    NgxDropzoneModule,
+
     FlexLayoutModule
   ]
 })
