@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProjectService } from 'src/app/services/projects/project.service';
 
 @Component({
   selector: 'app-view-projects',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-projects.component.css']
 })
 export class ViewProjectsComponent implements OnInit {
-
-  constructor() { }
+  projects: any;
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
+    const payload = {
+      id: sessionStorage.getItem('id')
+    };
+    this.projectService.fetchMyProjects(payload).subscribe((response: any) => {
+      this.projects = response.data;
+    });
   }
-
 }
