@@ -46,6 +46,20 @@ export class LoginComponent implements OnInit {
       (response: any) => {
         this.loading = false;
         this.toastr.success(response.message);
+        switch (response.data.user.role) {
+          case 'ambassador':
+            this.router.navigate(['amb']);
+            break;
+          case 'supervisor':
+            this.router.navigate(['sup']);
+            break;
+          case 'administrator':
+            this.router.navigate(['admin']);
+            break;
+          default:
+            this.router.navigate(['app']);
+            break;
+        }
       },
       err => {
         this.loading = false;
