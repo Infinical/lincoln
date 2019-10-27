@@ -19,4 +19,10 @@ export class AuthService {
   logout() {
     return this.http.delete(`${environment.baseurl}session`);
   }
+
+  //admin
+
+  getAllUsers() {
+    return this.http.get(`${environment.baseurl}users `);
+  }
 }
