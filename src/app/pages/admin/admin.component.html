@@ -7,9 +7,19 @@
       </a>
     </div>
     <div class="header-actions">
-      <a href="..." class="nav-link nav-text">
-        Log Out
-      </a>
+      <clr-dropdown>
+        <button
+          class="nav-text"
+          clrDropdownTrigger
+          aria-label="open user profile"
+        >
+          {{ email }}
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+          <a (click)="logout()" clrDropdownItem>Log out</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
     </div>
   </header>
   <div class="content-container">
