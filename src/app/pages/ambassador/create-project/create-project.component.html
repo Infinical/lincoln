@@ -1,0 +1,58 @@
+<div class="title">
+  <h3>Create A New Project</h3>
+</div>
+<div fxLayout="row" fxLayoutAlign="center">
+  <ngx-loading [show]="loading"></ngx-loading>
+  <form clrForm clrLayout="vertical" [formGroup]="projectForm">
+    <clr-input-container>
+      <label>Project Name</label>
+      <input clrInput type="text" name="example" formControlName="name" />
+    </clr-input-container>
+    <clr-textarea-container>
+      <label>Project Description</label>
+      <textarea
+        clrTextarea
+        formControlName="description"
+        name="description"
+        required
+      ></textarea>
+    </clr-textarea-container>
+
+    <clr-date-container>
+      <label>Start Date</label>
+      <input type="date" clrDate name="demo" formControlName="start" />
+    </clr-date-container>
+    <clr-date-container>
+      <label>End Date</label>
+      <input type="date" clrDate name="demo" formControlName="end" />
+    </clr-date-container>
+    <div class="clr-form-control">
+      <label class="clr-control-label">Basic</label>
+      <div class="clr-control-container">
+        <div class="clr-file-wrapper">
+          <label for="basic" class="clr-control-label"
+            ><span class="btn btn-sm">Upload Attachment</span></label
+          >
+          <input
+            type="file"
+            id="basic"
+            placeholder="Upload a PDF/DOC of your project"
+            class="clr-file"
+            formControlName="attachment"
+          />
+        </div>
+        <!-- IMPORTANT DIFFERENCE IN STRUCTURE! ICON IS NOT PART OF THE INPUT WRAPPER -->
+        <clr-icon
+          class="clr-validate-icon"
+          shape="exclamation-circle"
+        ></clr-icon>
+        <span class="clr-subtext">Upload a PDF/DOC of your project</span>
+      </div>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="center">
+      <button class="btn btn-primary" (click)="createProject()">
+        Create Project
+      </button>
+    </div>
+  </form>
+</div>
