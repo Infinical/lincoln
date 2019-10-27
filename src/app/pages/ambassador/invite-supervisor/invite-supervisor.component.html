@@ -1,0 +1,34 @@
+<div class="title">
+  <h3>Invite Supervisor</h3>
+</div>
+<div fxLayout="row" fxLayoutAlign="center">
+  <ngx-loading [show]="loading"></ngx-loading>
+  <form clrForm clrLayout="vertical" [formGroup]="inviteForm">
+    <clr-input-container>
+      <label>Title</label>
+      <input clrInput type="text" name="example" formControlName="title" />
+    </clr-input-container>
+    <clr-input-container>
+      <label>Full Name</label>
+      <input clrInput type="text" name="example" formControlName="name" />
+    </clr-input-container>
+    <clr-input-container>
+      <label>Occupation</label>
+      <input clrInput type="text" name="example" formControlName="occupation" />
+    </clr-input-container>
+    <clr-input-container>
+      <label>Email</label>
+      <input clrInput type="email" name="example" formControlName="email" />
+    </clr-input-container>
+    <clr-input-container>
+      <label>Phone</label>
+      <input clrInput type="text" name="example" formControlName="phone" />
+    </clr-input-container>
+
+    <div fxLayout="row" fxLayoutAlign="center">
+      <button class="btn btn-primary">
+        Invite Supervisor
+      </button>
+    </div>
+  </form>
+</div>
