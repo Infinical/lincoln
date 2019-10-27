@@ -3,6 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { AmbassadorComponent } from './ambassador.component';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
+import { InviteSupervisorComponent } from './invite-supervisor/invite-supervisor.component';
+import { MyProfileComponent } from './my-profile/my-profile.component';
 
 const routes: Routes = [
   {
@@ -10,7 +12,9 @@ const routes: Routes = [
     component: AmbassadorComponent,
     children: [
       { path: 'new', component: CreateProjectComponent },
-      { path: 'view', component: ViewProjectsComponent }
+      { path: 'view', component: ViewProjectsComponent },
+      { path: 'invite', component: InviteSupervisorComponent },
+      { path: 'profile', component: MyProfileComponent }
     ]
   }
 ];

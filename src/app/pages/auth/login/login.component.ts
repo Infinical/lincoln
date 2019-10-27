@@ -46,6 +46,8 @@ export class LoginComponent implements OnInit {
       (response: any) => {
         this.loading = false;
         this.toastr.success(response.message);
+        sessionStorage.setItem('id', response.data.user.id);
+        sessionStorage.setItem('email', response.data.user.email);
         switch (response.data.user.role) {
           case 'ambassador':
             this.router.navigate(['amb']);

@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClarityModule } from '@clr/angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
+import { NgxDropzoneModule } from 'ngx-dropzone';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { GetTokenInterceptor } from './helpers/get-token.interceptor';
+import { SetTokenInterceptor } from './helpers/set-token.interceptor';
 
 @NgModule({
   declarations: [AppComponent],
@@ -24,18 +28,23 @@ import { ToastrModule } from 'ngx-toastr';
       animationType: ngxLoadingAnimationTypes.wanderingCubes,
       backdropBackgroundColour: 'rgba(0,0,0,0.1)',
       backdropBorderRadius: '4px',
-      primaryColour: '#052A47',
-      secondaryColour: '#052A47',
-      tertiaryColour: '#052A47'
+      primaryColour: '#167DC0',
+      secondaryColour: '#167DC0',
+      tertiaryColour: '#167DC0'
     }),
     ToastrModule.forRoot({
       timeOut: 5000,
       positionClass: 'toast-top-center',
       closeButton: true,
       preventDuplicates: false
-    })
+    }),
+    NgxDropzoneModule,
+    FlexLayoutModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: GetTokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: SetTokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

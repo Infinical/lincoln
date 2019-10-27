@@ -23,9 +23,9 @@ import { ToastrModule } from 'ngx-toastr';
       animationType: ngxLoadingAnimationTypes.wanderingCubes,
       backdropBackgroundColour: 'rgba(0,0,0,0.1)',
       backdropBorderRadius: '4px',
-      primaryColour: '#052A47',
-      secondaryColour: '#052A47',
-      tertiaryColour: '#052A47'
+      primaryColour: '#167DC0',
+      secondaryColour: '#167DC0',
+      tertiaryColour: '#167DC0'
     }),
     ToastrModule.forRoot({
       timeOut: 5000,

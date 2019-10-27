@@ -15,4 +15,8 @@ export class AuthService {
   login(payload) {
     return this.http.post(`${environment.baseurl}session`, payload);
   }
+
+  logout() {
+    return this.http.delete(`${environment.baseurl}session`);
+  }
 }
