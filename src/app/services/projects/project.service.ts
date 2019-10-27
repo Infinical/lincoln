@@ -7,12 +7,18 @@ import { environment } from 'src/environments/environment';
 })
 export class ProjectService {
   constructor(private http: HttpClient) {}
-
+  //ambassador
   createProject(payload) {
     return this.http.post(`${environment.baseurl}projects `, payload);
   }
 
   fetchMyProjects(payload) {
     return this.http.post(`${environment.baseurl}my_projects`, payload);
+  }
+
+  //admin
+
+  fetchAllProjects() {
+    return this.http.get(`${environment.baseurl}projects`);
   }
 }
