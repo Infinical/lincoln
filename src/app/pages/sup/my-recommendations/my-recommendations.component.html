@@ -1,0 +1,18 @@
+<div class="title">
+  <h3>My Recommendations</h3>
+</div>
+
+<clr-tabs>
+  <clr-tab>
+    <button clrTabLink id="link1">Pending</button>
+    <clr-tab-content id="content1" *clrIfActive>
+      <app-pending></app-pending>
+    </clr-tab-content>
+  </clr-tab>
+  <clr-tab>
+    <button clrTabLink>Completed</button>
+    <clr-tab-content *clrIfActive="true">
+      <app-completed></app-completed>
+    </clr-tab-content>
+  </clr-tab>
+</clr-tabs>
