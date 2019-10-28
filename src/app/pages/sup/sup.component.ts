@@ -10,7 +10,8 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class SupComponent implements OnInit {
   loading: boolean;
-  collapsed: any
+  collapsed: any;
+  email: string;
 
   constructor(
     private router: Router,
@@ -19,7 +20,7 @@ export class SupComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.email = sessionStorage.getItem('email')
+    this.email = sessionStorage.getItem('email');
   }
 
   logout() {
