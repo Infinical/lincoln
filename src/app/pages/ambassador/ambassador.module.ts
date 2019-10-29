@@ -45,7 +45,7 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
       closeButton: true,
       preventDuplicates: false
     }),
-    NgxDropzoneModule,
+
     FlexLayoutModule
   ]
 })
