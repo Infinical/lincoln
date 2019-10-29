@@ -1,0 +1,27 @@
+<div class="title">
+  <h3>Project Details</h3>
+</div>
+<div fxLayout="row" fxLayoutAlign="center">
+  <div class="clr-col-lg-6 clr-col-12">
+    <div class="card">
+      <div class="card-header">
+        {{ project.name }}
+      </div>
+      <div class="card-block">
+        <div class="card-media-block">
+          <img src="..." class="card-media-image" />
+          <div class="card-media-description">
+            <span class="card-media-title">
+              {{ project.name }}
+            </span>
+            <span class="card-media-text"> Owner: {{ this.email }} </span>
+          </div>
+        </div>
+        <div class="card-text">Description:{{ project.description }}</div>
+        <div class="card-text">Start Date: {{ project.start_date }}</div>
+        <div class="card-text">End Date: {{ project.end_date }}</div>
+        <div class="card-text">Attachment: {{ project.attachment }}</div>
+      </div>
+    </div>
+  </div>
+</div>

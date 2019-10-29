@@ -39,7 +39,9 @@
             placeholder="Upload a PDF/DOC of your project"
             class="clr-file"
             formControlName="attachment"
+            (change)="onSelect($event.target.files)"
           />
+          <div>Uploaded File: {{ this.filename }}</div>
         </div>
         <!-- IMPORTANT DIFFERENCE IN STRUCTURE! ICON IS NOT PART OF THE INPUT WRAPPER -->
         <clr-icon

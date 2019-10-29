@@ -8,6 +8,9 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class UsersComponent implements OnInit {
   users: any;
+
+  selected: any;
+
   constructor(private authService: AuthService) {}
 
   ngOnInit() {

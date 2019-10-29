@@ -1,8 +1,12 @@
 <div class="title">
   <h3>My Projects</h3>
 </div>
+
 <div class="clr-row">
-  <div class="clr-col-4" *ngFor="let project of projects">
+  <div
+    class="clr-col-lg-5 clr-col-md-8 clr-col-12"
+    *ngFor="let project of projects"
+  >
     <div class="card">
       <div class="card-header">
         {{ project.name }}
@@ -13,8 +17,12 @@
         </div>
       </div>
       <div class="card-footer">
-        <button class="btn btn-info-outline">Edit</button>
-        <button class="btn btn-warning-outline">Delete</button>
+        <button
+          class="btn btn-info-outline"
+          (click)="projectDetails(project.id)"
+        >
+          View Details
+        </button>
       </div>
     </div>
   </div>

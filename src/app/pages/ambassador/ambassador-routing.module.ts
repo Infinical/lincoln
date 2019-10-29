@@ -5,6 +5,7 @@ import { CreateProjectComponent } from './create-project/create-project.componen
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
 import { InviteSupervisorComponent } from './invite-supervisor/invite-supervisor.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,8 @@ const routes: Routes = [
       { path: 'new', component: CreateProjectComponent },
       { path: 'view', component: ViewProjectsComponent },
       { path: 'invite', component: InviteSupervisorComponent },
-      { path: 'profile', component: MyProfileComponent }
+      { path: 'profile', component: MyProfileComponent },
+      { path: 'details', component: ViewDetailsComponent }
     ]
   }
 ];

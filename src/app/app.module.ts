@@ -39,7 +39,6 @@ import { BarRatingModule } from 'ngx-bar-rating';
       closeButton: true,
       preventDuplicates: false
     }),
-    BarRatingModule,
     FlexLayoutModule
   ],
   providers: [

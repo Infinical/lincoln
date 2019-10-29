@@ -13,6 +13,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
 import { InviteSupervisorComponent } from './invite-supervisor/invite-supervisor.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,10 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
     CreateProjectComponent,
     ViewProjectsComponent,
     InviteSupervisorComponent,
-    MyProfileComponent
+
+    MyProfileComponent,
+    ViewDetailsComponent
+
   ],
   imports: [
     CommonModule,

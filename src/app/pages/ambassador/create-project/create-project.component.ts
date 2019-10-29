@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
 export class CreateProjectComponent implements OnInit {
   projectForm: FormGroup;
   loading: boolean;
+  filename: any;
   constructor(
     private fb: FormBuilder,
     private projectService: ProjectService,
@@ -28,10 +29,15 @@ export class CreateProjectComponent implements OnInit {
       attachment: ['']
     });
   }
+  onSelect(event) {
+    console.log(event);
+    this.filename = event[0].name;
+  }
 
   createProject() {
     this.loading = true;
     const formData = this.projectForm.value;
+    console.log(formData.attachment);
     const payload = {
       project: {
         name: formData.name,
