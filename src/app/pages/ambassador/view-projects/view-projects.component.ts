@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectService } from 'src/app/services/projects/project.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-view-projects',
@@ -8,7 +9,7 @@ import { ProjectService } from 'src/app/services/projects/project.service';
 })
 export class ViewProjectsComponent implements OnInit {
   projects: any;
-  constructor(private projectService: ProjectService) {}
+  constructor(private projectService: ProjectService, private router: Router) {}
 
   ngOnInit() {
     const payload = {
@@ -17,5 +18,11 @@ export class ViewProjectsComponent implements OnInit {
     this.projectService.fetchMyProjects(payload).subscribe((response: any) => {
       this.projects = response.data;
     });
+  }
+
+  projectDetails(id) {
+    sessionStorage.setItem('pid', id);
+
+    this.router.navigate(['amb/details']);
   }
 }

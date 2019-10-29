@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProjectService {
+  id: any;
   constructor(private http: HttpClient) {}
 
   createProject(payload) {
@@ -14,5 +15,15 @@ export class ProjectService {
 
   fetchMyProjects(payload) {
     return this.http.post(`${environment.baseurl}my_projects`, payload);
+  }
+
+  projectDetails(id) {
+    return this.http.get(`${environment.baseurl}projects/${id}`);
+  }
+
+  //admin
+
+  fetchAllProjects() {
+    return this.http.get(`${environment.baseurl}projects`);
   }
 }
