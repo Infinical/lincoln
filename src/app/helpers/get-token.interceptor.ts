@@ -20,8 +20,6 @@ export class GetTokenInterceptor implements HttpInterceptor {
     return next.handle(requests).pipe(
       map((event: HttpEvent<any>) => {
         if (event instanceof HttpResponse) {
-          console.log(event);
-          sessionStorage.setItem('token', event.body.data.token);
         }
 
         return event;

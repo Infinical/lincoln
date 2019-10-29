@@ -1,17 +1,57 @@
 <clr-main-container>
-  <clr-header>
-    ...
-    <div class="header-nav" [clr-nav-level]="1">
-      ...
+  <clr-header class="header-4">
+    <div class="branding">
+      <a class="nav-link">
+        <clr-icon shape="vm-bug"></clr-icon>
+        <span class="title">Lincoln Project</span>
+      </a>
     </div>
-    ...
+    <div class="header-actions">
+      <clr-dropdown>
+        <button
+          class="nav-text"
+          clrDropdownTrigger
+          aria-label="open user profile"
+        >
+          {{ email }}
+          <clr-icon shape="caret down"></clr-icon>
+        </button>
+        <clr-dropdown-menu *clrIfOpen clrPosition="bottom-right">
+          <a (click)="logout()" clrDropdownItem>Log out</a>
+        </clr-dropdown-menu>
+      </clr-dropdown>
+    </div>
+    <div class="header-nav" [clr-nav-level]="1"></div>
   </clr-header>
   <div class="content-container">
-    <main class="content-area">
-      ...
-    </main>
-    <nav class="sidenav" [clr-nav-level]="2">
-      ...
-    </nav>
+    <clr-vertical-nav
+      [clrVerticalNavCollapsible]="true"
+      [(clrVerticalNavCollapsed)]="collapsed"
+    >
+      <a
+        clrVerticalNavLink
+        routerLink="./recommendations"
+        routerLinkActive="active"
+        ><clr-icon clrVerticalNavIcon shape="success-standard"></clr-icon> My
+        Recommendations</a
+      >
+
+      <div class="nav-divider"></div>
+      <a clrVerticalNavLink routerLink="./profile" routerLinkActive="active">
+        <clr-icon clrVerticalNavIcon shape="user"></clr-icon>
+        My Profile</a
+      >
+      <a clrVerticalNavLink>
+        <clr-icon
+          clrVerticalNavIcon
+          shape="logout"
+          (click)="logout()"
+        ></clr-icon>
+        Log Out</a
+      >
+    </clr-vertical-nav>
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </clr-main-container>

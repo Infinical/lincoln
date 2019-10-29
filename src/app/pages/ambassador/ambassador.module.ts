@@ -21,8 +21,10 @@ import { ViewDetailsComponent } from './view-details/view-details.component';
     CreateProjectComponent,
     ViewProjectsComponent,
     InviteSupervisorComponent,
+
     MyProfileComponent,
     ViewDetailsComponent
+
   ],
   imports: [
     CommonModule,

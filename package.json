@@ -30,6 +30,7 @@
     "@clr/icons": "2.3.0",
     "@clr/ui": "2.3.0",
     "@webcomponents/custom-elements": "^1.0.0",
+    "ngx-bar-rating": "^1.1.0",
     "ngx-loading": "^8.0.0",
     "ngx-toastr": "^11.1.2",
     "rxjs": "~6.4.0",

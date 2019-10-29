@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class ProjectService {
   id: any;
   constructor(private http: HttpClient) {}
-
+  //ambassador
   createProject(payload) {
     return this.http.post(`${environment.baseurl}projects `, payload);
   }
@@ -16,6 +16,7 @@ export class ProjectService {
   fetchMyProjects(payload) {
     return this.http.post(`${environment.baseurl}my_projects`, payload);
   }
+
 
   projectDetails(id) {
     return this.http.get(`${environment.baseurl}projects/${id}`);
