@@ -9,7 +9,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
-import { NgxDropzoneModule } from 'ngx-dropzone';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { GetTokenInterceptor } from './helpers/get-token.interceptor';
 import { SetTokenInterceptor } from './helpers/set-token.interceptor';
@@ -38,7 +38,7 @@ import { SetTokenInterceptor } from './helpers/set-token.interceptor';
       closeButton: true,
       preventDuplicates: false
     }),
-    NgxDropzoneModule,
+
     FlexLayoutModule
   ],
   providers: [

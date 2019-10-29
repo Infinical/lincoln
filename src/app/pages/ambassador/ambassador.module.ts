@@ -8,7 +8,6 @@ import { NgxLoadingModule, ngxLoadingAnimationTypes } from 'ngx-loading';
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 
-import { NgxDropzoneModule } from 'ngx-dropzone';
 import { CreateProjectComponent } from './create-project/create-project.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ViewProjectsComponent } from './view-projects/view-projects.component';
