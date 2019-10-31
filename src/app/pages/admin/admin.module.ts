@@ -9,9 +9,11 @@ import { CommonModule } from '@angular/common';
 import { AdminComponent } from './admin.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { UsersComponent } from './users/users.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { RecommendationsComponent } from './recommendations/recommendations.component';
 
 @NgModule({
-  declarations: [AdminComponent, ProjectsComponent, UsersComponent],
+  declarations: [AdminComponent, ProjectsComponent, UsersComponent, ProjectDetailsComponent, RecommendationsComponent],
   imports: [
     CommonModule,
     AdminRoutingModule,
