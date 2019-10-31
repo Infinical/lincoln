@@ -14,6 +14,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { GetTokenInterceptor } from './helpers/get-token.interceptor';
 import { SetTokenInterceptor } from './helpers/set-token.interceptor';
 
+import { RatingModule } from 'ng-starrating';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -38,7 +39,9 @@ import { SetTokenInterceptor } from './helpers/set-token.interceptor';
       closeButton: true,
       preventDuplicates: false
     }),
-    FlexLayoutModule
+    FlexLayoutModule,
+
+    RatingModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: GetTokenInterceptor, multi: true },

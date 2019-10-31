@@ -23,6 +23,6 @@ export class ViewProjectsComponent implements OnInit {
   projectDetails(id) {
     sessionStorage.setItem('pid', id);
 
-    this.router.navigate(['amb/home/details']);
+    this.router.navigate(['amb/details']);
   }
 }
