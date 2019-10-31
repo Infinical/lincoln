@@ -1,0 +1,22 @@
+<div class="clr-row">
+  <div class="clr-col-4" *ngFor="let project of projects">
+    <div class="card">
+      <div class="card-header">
+        {{ project.name }}
+      </div>
+      <div class="card-block">
+        <div class="card-title">
+          {{ project.description }}
+        </div>
+      </div>
+      <div class="card-footer">
+        <button
+          class="btn btn-info-outline"
+          (click)="createRecommendation(project)"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

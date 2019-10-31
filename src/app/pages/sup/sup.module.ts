@@ -7,9 +7,20 @@ import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common';
 import { SupRoutingModule } from './sup-routing.module';
 import { SupComponent } from './sup.component';
+import { MyRecommendationsComponent } from './my-recommendations/my-recommendations.component';
+import { PendingComponent } from './my-recommendations/pending/pending.component';
+import { CompletedComponent } from './my-recommendations/completed/completed.component';
+import { CreateRecComponent } from './create-rec/create-rec.component';
+import { BarRatingModule } from 'ngx-bar-rating';
 
 @NgModule({
-  declarations: [SupComponent],
+  declarations: [
+    SupComponent,
+    MyRecommendationsComponent,
+    PendingComponent,
+    CompletedComponent,
+    CreateRecComponent
+  ],
   imports: [
     CommonModule,
     SupRoutingModule,
@@ -17,6 +28,7 @@ import { SupComponent } from './sup.component';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    BarRatingModule,
     NgxLoadingModule.forRoot({
       animationType: ngxLoadingAnimationTypes.wanderingCubes,
       backdropBackgroundColour: 'rgba(0,0,0,0.1)',

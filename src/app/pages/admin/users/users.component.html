@@ -1,3 +1,4 @@
+
 <clr-datagrid [(clrDgSelected)]="selected">
   <clr-dg-action-bar>
     <div class="btn-group">
@@ -9,13 +10,16 @@
       </button>
     </div>
   </clr-dg-action-bar>
+
   <clr-dg-column>ID</clr-dg-column>
   <clr-dg-column>Username</clr-dg-column>
   <clr-dg-column>Email</clr-dg-column>
   <clr-dg-column>Role</clr-dg-column>
   <clr-dg-column>View</clr-dg-column>
 
+
   <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
+
     <clr-dg-cell>{{ user.id }}</clr-dg-cell>
     <clr-dg-cell>{{ user.username }}</clr-dg-cell>
     <clr-dg-cell>{{ user.email }}</clr-dg-cell>

@@ -9,6 +9,7 @@ import { AuthService } from 'src/app/services/auth/auth.service';
 })
 export class InviteSupervisorComponent implements OnInit {
   inviteForm: FormGroup;
+  loading: any;
 
   constructor(private fb: FormBuilder, private authService: AuthService) {}
 

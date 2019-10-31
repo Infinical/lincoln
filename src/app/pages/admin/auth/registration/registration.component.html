@@ -9,7 +9,8 @@
       <clr-select-container>
         <label class="clr-sr-only">User Role</label>
         <select clrSelect name="type" formControlName="role">
-          <option *ngFor="let role of userRoles">{{ role.name }}</option>
+          <option value="ambassador">Ambassador</option>
+          <option value="supervisor">Supervisor</option>
         </select>
       </clr-select-container>
       <clr-input-container>

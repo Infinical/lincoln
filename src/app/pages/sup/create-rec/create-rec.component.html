@@ -1,0 +1,64 @@
+<div class="title">
+  <h3>Recommend Project</h3>
+</div>
+<div fxLayout="row" fxLayoutAlign="center">
+  <ngx-loading [show]="loading"></ngx-loading>
+  <form clrForm clrLayout="vertical" [formGroup]="recForm">
+    <clr-date-container>
+      <label>From</label>
+      <input type="date" clrDate name="demo" formControlName="start" />
+    </clr-date-container>
+    <clr-date-container>
+      <label>Till</label>
+      <input type="date" clrDate name="demo" formControlName="end" />
+    </clr-date-container>
+    <clr-input-container>
+      <label>Rate</label>
+      <input
+        clrInput
+        placeholder="Rate out of 10"
+        name="name"
+        formControlName="rate"
+      />
+    </clr-input-container>
+    <div class="clr-form-control">
+      <bar-rating
+        name="rating"
+        formControlName="rate"
+        [max]="4"
+        required
+        disabled
+      ></bar-rating>
+    </div>
+
+    <div class="clr-form-control">
+      <label class="clr-control-label">Basic</label>
+      <div class="clr-control-container">
+        <div class="clr-file-wrapper">
+          <label for="basic" class="clr-control-label"
+            ><span class="btn btn-sm">Upload Attachment</span></label
+          >
+          <input
+            type="file"
+            id="basic"
+            placeholder="Upload a Recommendation"
+            class="clr-file"
+            formControlName="attachment"
+          />
+        </div>
+        <!-- IMPORTANT DIFFERENCE IN STRUCTURE! ICON IS NOT PART OF THE INPUT WRAPPER -->
+        <clr-icon
+          class="clr-validate-icon"
+          shape="exclamation-circle"
+        ></clr-icon>
+        <span class="clr-subtext">Upload a PDF/DOC of your project</span>
+      </div>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center">
+      <button class="btn btn-primary" (click)="createRecommendation()">
+        Create Recommendation
+      </button>
+    </div>
+  </form>
+</div>

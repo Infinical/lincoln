@@ -13,6 +13,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { GetTokenInterceptor } from './helpers/get-token.interceptor';
 import { SetTokenInterceptor } from './helpers/set-token.interceptor';
+import { BarRatingModule } from 'ngx-bar-rating';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,7 +39,6 @@ import { SetTokenInterceptor } from './helpers/set-token.interceptor';
       closeButton: true,
       preventDuplicates: false
     }),
-
     FlexLayoutModule
   ],
   providers: [

@@ -23,8 +23,10 @@ import { RegistrationComponent } from './auth/registration/registration.componen
     CreateProjectComponent,
     ViewProjectsComponent,
     InviteSupervisorComponent,
+
     MyProfileComponent,
     ViewDetailsComponent
+
   ],
   imports: [
     CommonModule,
