@@ -11,7 +11,6 @@ import { MyRecommendationsComponent } from './my-recommendations/my-recommendati
 import { PendingComponent } from './my-recommendations/pending/pending.component';
 import { CompletedComponent } from './my-recommendations/completed/completed.component';
 import { CreateRecComponent } from './create-rec/create-rec.component';
-import { BarRatingModule } from 'ngx-bar-rating';
 
 @NgModule({
   declarations: [
@@ -28,7 +27,7 @@ import { BarRatingModule } from 'ngx-bar-rating';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    BarRatingModule,
+
     NgxLoadingModule.forRoot({
       animationType: ngxLoadingAnimationTypes.wanderingCubes,
       backdropBackgroundColour: 'rgba(0,0,0,0.1)',
