@@ -11,4 +11,10 @@ export class RecommendationService {
   createRecommendation(payload) {
     return this.http.post(`${environment.baseurl}recommendations`, payload);
   }
+
+  //admin
+
+  getAllRecommedations() {
+    return this.http.get(`${environment.baseurl}arecommendations`);
+  }
 }

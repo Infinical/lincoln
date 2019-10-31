@@ -30,4 +30,16 @@ export class ProjectService {
   fetchAllProjects(payload) {
     return this.http.post(`${environment.baseurl}sup_projects`, payload);
   }
+
+  getProjects() {
+    return this.http.get(`${environment.baseurl}aprojects`);
+  }
+
+  getProjectDetails(id) {
+    return this.http.get(`${environment.baseurl}aprojects/${id}`);
+  }
+
+  deleteProject(id) {
+    return this.http.delete(`${environment.baseurl}aprojects/${id}`);
+  }
 }
