@@ -1,7 +1,7 @@
 <div class="title">
   <h3>Recommend Project</h3>
 </div>
-<div fxLayout="row" fxLayoutAlign="center">
+<!-- <div fxLayout="row" fxLayoutAlign="center">
   <ngx-loading [show]="loading"></ngx-loading>
   <form clrForm clrLayout="vertical" [formGroup]="recForm">
     <clr-date-container>
@@ -38,7 +38,7 @@
             formControlName="attachment"
           />
         </div>
-        <!-- IMPORTANT DIFFERENCE IN STRUCTURE! ICON IS NOT PART OF THE INPUT WRAPPER -->
+
         <clr-icon
           class="clr-validate-icon"
           shape="exclamation-circle"
@@ -52,5 +52,59 @@
         Create Recommendation
       </button>
     </div>
+  </form>
+</div> -->
+
+<div class="uk-child-width-expand@s" uk-grid>
+  <form class="uk-form-stacked uk-grid-small" uk-grid [formGroup]="recForm">
+    <div class="uk-width-1-1" fxLayout="row">
+      <label class="uk-form-label">Supervised</label>
+      <div class="uk-margin" fxFlex="50">
+        <clr-date-container>
+          <label>From</label>
+          <input type="date" clrDate name="demo" formControlName="start" />
+        </clr-date-container>
+      </div>
+      <div class="uk-margin" fxFlex="50">
+        <clr-date-container>
+          <label>Till</label>
+          <input type="date" clrDate name="demo" formControlName="end" />
+        </clr-date-container>
+      </div>
+    </div>
+
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Rate</label>
+
+      <div>
+        <star-rating
+          value="5"
+          checkedcolor="red"
+          uncheckedcolor="black"
+          size="24px"
+          readonly="false"
+          (rate)="onRate($event)"
+        ></star-rating>
+      </div>
+    </div>
+
+    <div class="uk-margin" uk-margin>
+      <div uk-form-custom="target: true">
+        <input type="file" />
+        <input
+          class="uk-input uk-form-width-medium"
+          type="text"
+          placeholder="Select file"
+          disabled
+        />
+      </div>
+      <button class="uk-button uk-button-default">Submit</button>
+    </div>
+    <button
+      class="uk-button uk-button-secondary uk-width-1-1"
+      (click)="createRecommendation()"
+    >
+      Submit Recommendation
+    </button>
   </form>
 </div>
