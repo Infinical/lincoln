@@ -14,8 +14,6 @@ import { ViewProjectsComponent } from './view-projects/view-projects.component';
 import { InviteSupervisorComponent } from './invite-supervisor/invite-supervisor.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ViewDetailsComponent } from './view-details/view-details.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegistrationComponent } from './auth/registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +24,6 @@ import { RegistrationComponent } from './auth/registration/registration.componen
 
     MyProfileComponent,
     ViewDetailsComponent
-
   ],
   imports: [
     CommonModule,
