@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecommendationService } from 'src/app/services/recommendation/recommendation.service';
 
 @Component({
   selector: 'app-recommendations',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./recommendations.component.css']
 })
 export class RecommendationsComponent implements OnInit {
-
-  constructor() { }
+  recs: any;
+  selected = [];
+  constructor(private recService: RecommendationService) {}
 
   ngOnInit() {
+    this.recService.getAllRecommedations().subscribe((response: any) => {
+      this.recs = response.data;
+    });
   }
-
 }

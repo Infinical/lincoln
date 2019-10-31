@@ -21,6 +21,6 @@ export class ProjectsComponent implements OnInit {
 
   viewDetails(value) {
     sessionStorage.setItem('project_id', value);
-    this.router.navigate(['admin/details']);
+    this.router.navigate(['admin/pdetails']);
   }
 }

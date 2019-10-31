@@ -1,4 +1,5 @@
 <div>
+  <ngx-loading [show]="loading"></ngx-loading>
   <div class="uk-card uk-card-default uk-card-large uk-card-body">
     <div class="uk-card-header">
       <h3 class="uk-card-title">{{ project.name }}</h3>
@@ -12,7 +13,9 @@
       <h4>Attachment: {{ project.attachment }}</h4>
     </div>
     <div class="uk-card-footer">
-      <button class="uk-button uk-button-danger">Delete</button>
+      <button class="uk-button uk-button-danger" (click)="deleteProject()">
+        Delete
+      </button>
     </div>
   </div>
 </div>

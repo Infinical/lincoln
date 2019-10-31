@@ -5,6 +5,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { UsersComponent } from './users/users.component';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { RecommendationsComponent } from './recommendations/recommendations.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 const routes: Routes = [
   {
@@ -12,9 +13,10 @@ const routes: Routes = [
     component: AdminComponent,
     children: [
       { path: 'projects', component: ProjectsComponent },
-      { path: 'details', component: ProjectDetailsComponent },
+      { path: 'pdetails', component: ProjectDetailsComponent },
       { path: 'recs', component: RecommendationsComponent },
-      { path: 'users', component: UsersComponent }
+      { path: 'users', component: UsersComponent },
+      { path: 'udetails', component: UserDetailsComponent }
     ]
   }
 ];

@@ -1,26 +1,21 @@
+<div class="title">
+  <h2>List of Recommendations</h2>
+</div>
 <clr-datagrid [(clrDgSelected)]="selected">
-  <clr-dg-action-bar>
+  <!-- <clr-dg-action-bar>
     <button class="btn btn-danger-outline">Delete</button></clr-dg-action-bar
-  >
-  <clr-dg-column>ID</clr-dg-column>
-  <clr-dg-column>Project Name</clr-dg-column>
+  > -->
+
   <clr-dg-column>Start Date</clr-dg-column>
   <clr-dg-column>End Date</clr-dg-column>
   <clr-dg-column>View</clr-dg-column>
   <clr-dg-column>Download</clr-dg-column>
 
-  <clr-dg-row *ngFor="let project of projects" [clrDgItem]="project">
-    <clr-dg-cell>{{ project.id }}</clr-dg-cell>
-    <clr-dg-cell>{{ project.name }}</clr-dg-cell>
-    <clr-dg-cell>{{ project.start_date }}</clr-dg-cell>
-    <clr-dg-cell>{{ project.end_date }}</clr-dg-cell>
+  <clr-dg-row *ngFor="let rec of recs" [clrDgItem]="rec">
+    <clr-dg-cell>{{ rec.start_date }}</clr-dg-cell>
+    <clr-dg-cell>{{ rec.end_date }}</clr-dg-cell>
     <clr-dg-cell
-      ><button
-        type="button"
-        class="btn btn-icon"
-        aria-label="eye"
-        (click)="viewDetails(project.id)"
-      >
+      ><button type="button" class="btn btn-icon" aria-label="eye">
         <clr-icon shape="eye"></clr-icon></button
     ></clr-dg-cell>
     <clr-dg-cell>
