@@ -20,7 +20,6 @@ export class AuthService {
     return this.http.delete(`${environment.baseurl}session`);
   }
 
-
   inviteSup(payload) {
     return this.http.post(`${environment.baseurl}invite`, payload);
   }
@@ -29,5 +28,9 @@ export class AuthService {
 
   getAllUsers() {
     return this.http.get(`${environment.baseurl}users `);
+  }
+
+  fetchSupervisors() {
+    return this.http.get(`${environment.baseurl}list_supervisors`);
   }
 }

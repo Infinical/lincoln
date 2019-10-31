@@ -17,14 +17,17 @@ export class ProjectService {
     return this.http.post(`${environment.baseurl}my_projects`, payload);
   }
 
-
   projectDetails(id) {
     return this.http.get(`${environment.baseurl}projects/${id}`);
   }
 
+  addSupervisor(id, payload) {
+    return this.http.put(`${environment.baseurl}projects/${id}`, payload);
+  }
+
   //admin
 
-  fetchAllProjects() {
-    return this.http.get(`${environment.baseurl}projects`);
+  fetchAllProjects(payload) {
+    return this.http.post(`${environment.baseurl}sup_projects`, payload);
   }
 }
