@@ -5,6 +5,10 @@ import { SupComponent } from './sup.component';
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
+  },
+  {
+    path: 'home',
     component: SupComponent
   }
 ];
