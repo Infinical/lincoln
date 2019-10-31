@@ -11,6 +11,8 @@ import { MyRecommendationsComponent } from './my-recommendations/my-recommendati
 import { PendingComponent } from './my-recommendations/pending/pending.component';
 import { CompletedComponent } from './my-recommendations/completed/completed.component';
 import { CreateRecComponent } from './create-rec/create-rec.component';
+import { RatingModule } from 'ng-starrating';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,8 @@ import { CreateRecComponent } from './create-rec/create-rec.component';
     MyRecommendationsComponent,
     PendingComponent,
     CompletedComponent,
-    CreateRecComponent
+    CreateRecComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,
@@ -41,7 +44,9 @@ import { CreateRecComponent } from './create-rec/create-rec.component';
       positionClass: 'toast-top-center',
       closeButton: true,
       preventDuplicates: false
-    })
+    }),
+
+    RatingModule
   ]
 })
 export class SupModule {}

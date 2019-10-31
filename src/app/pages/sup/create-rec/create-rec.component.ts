@@ -10,6 +10,11 @@ import { RecommendationService } from 'src/app/services/recommendation/recommend
 export class CreateRecComponent implements OnInit {
   recForm: FormGroup;
   public loading: false;
+  grade = 0;
+  maxRating = 5;
+  showRatingCounter = true;
+  myRating: number;
+  rate: any;
   constructor(
     private fb: FormBuilder,
     private recService: RecommendationService
@@ -23,15 +28,18 @@ export class CreateRecComponent implements OnInit {
       attachment: ['']
     });
   }
+  onRate(value) {
+    this.rate = value.newValue.toString();
+  }
   createRecommendation() {
     const formData = this.recForm.value;
     const payload = {
       recommendations: {
         start_date: formData.start,
         end_date: formData.end,
-        rate: formData.rate,
+        rate: this.rate,
         attachment: formData.attachment,
-        project_id: sessionStorage.getItem('id')
+        project_id: sessionStorage.getItem('project_id')
       }
     };
 
