@@ -33,4 +33,8 @@ export class AuthService {
   fetchSupervisors() {
     return this.http.get(`${environment.baseurl}list_supervisors`);
   }
+
+  userDetails(payload) {
+    return this.http.post(`${environment.baseurl}user_details`, payload);
+  }
 }
