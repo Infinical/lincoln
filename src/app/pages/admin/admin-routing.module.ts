@@ -7,12 +7,9 @@ import { UsersComponent } from './users/users.component';
 const routes: Routes = [
   {
     path: '',
-    component: AdminComponent,
-    children: [
-      { path: 'projects', component: ProjectsComponent },
-      { path: 'users', component: UsersComponent }
-    ]
-  }
+    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
+  },
+  { path: 'home', component: AdminComponent }
 ];
 
 @NgModule({

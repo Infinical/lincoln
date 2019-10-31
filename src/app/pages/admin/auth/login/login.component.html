@@ -3,8 +3,8 @@
   <form class="login">
     <section class="title">
       <h3 class="welcome">Welcome to</h3>
-      Lincoln Project Hub
-      <h5 class="hint">Use your credentials to sign in or create an Account</h5>
+      Lincoln Project Hub Admin
+      <h5 class="hint">Use your credentials to sign in</h5>
     </section>
     <div class="login-group" [formGroup]="loginForm">
       <clr-input-container>
@@ -30,6 +30,11 @@
 
       <button class="btn btn-primary" (click)="login()">LOGIN</button>
       <a class="signup" (click)="register()">Create an Account</a>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="center" class="button">
+      <button class="btn btn-primary">AMBASSADOR</button>
+      <button class="btn btn-primary">SUPERVISOR</button>
     </div>
   </form>
 </div>

@@ -7,11 +7,11 @@ import { CreateRecComponent } from './create-rec/create-rec.component';
 const routes: Routes = [
   {
     path: '',
-    component: SupComponent,
-    children: [
-      { path: 'recommendations', component: MyRecommendationsComponent },
-      { path: 'create', component: CreateRecComponent }
-    ]
+    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
+  },
+  {
+    path: 'home',
+    component: SupComponent
   }
 ];
 

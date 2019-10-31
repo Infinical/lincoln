@@ -3,7 +3,65 @@
 </div>
 <div fxLayout="row" fxLayoutAlign="center">
   <ngx-loading [show]="loading"></ngx-loading>
-  <form clrForm clrLayout="vertical" [formGroup]="projectForm">
+  <form class="uk-form-stacked uk-grid-small" uk-grid [formGroup]="projectForm">
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Project Name</label>
+      <div class="uk-margin">
+        <input
+          class="uk-input "
+          type="text"
+          placeholder="Project Name"
+          formControlName="name"
+        />
+      </div>
+    </div>
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Project Description</label>
+      <div class="uk-margin">
+        <textarea
+          class="uk-textarea"
+          rows="5"
+          placeholder="Project description"
+          formControlName="description"
+        ></textarea>
+      </div>
+
+      <div fxLayout="row" class="uk-width-1-1">
+        <div class="uk-margin">
+          <clr-date-container>
+            <label>Start Date</label>
+            <input type="date" clrDate name="demo" formControlName="start" />
+          </clr-date-container>
+          <clr-date-container>
+            <label>End Date</label>
+            <input type="date" clrDate name="demo" formControlName="end" />
+          </clr-date-container>
+        </div>
+      </div>
+
+      <div>
+        <label class="uk-form-label">Upload PDF/DOC of project</label>
+        <div class="js-upload uk-placeholder uk-text-center">
+          <span uk-icon="icon: cloud-upload"></span>
+          <span class="uk-text-middle"
+            >Attach binaries by dropping them here or</span
+          >
+          <div uk-form-custom>
+            <input type="file" multiple />
+            <span class="uk-link">selecting one</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="uk-button uk-button-secondary uk-width-1-1"
+      (click)="createProject()"
+    >
+      Create Project
+    </button>
+  </form>
+
+  <!-- <form clrForm clrLayout="vertical" [formGroup]="projectForm">
     <clr-input-container>
       <label>Project Name</label>
       <input clrInput type="text" name="example" formControlName="name" />
@@ -43,7 +101,7 @@
           />
           <div>Uploaded File: {{ this.filename }}</div>
         </div>
-        <!-- IMPORTANT DIFFERENCE IN STRUCTURE! ICON IS NOT PART OF THE INPUT WRAPPER -->
+   
         <clr-icon
           class="clr-validate-icon"
           shape="exclamation-circle"
@@ -56,5 +114,5 @@
         Create Project
       </button>
     </div>
-  </form>
+  </form> -->
 </div>
