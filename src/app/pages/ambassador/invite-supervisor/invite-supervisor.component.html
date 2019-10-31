@@ -1,7 +1,7 @@
 <div class="title">
   <h3>Invite Supervisor</h3>
 </div>
-<div fxLayout="row" fxLayoutAlign="center">
+<!-- <div fxLayout="row" fxLayoutAlign="center">
   <ngx-loading [show]="loading"></ngx-loading>
   <form clrForm clrLayout="vertical" [formGroup]="inviteForm">
     <clr-input-container>
@@ -29,6 +29,79 @@
       <button class="btn btn-primary" (click)="inviteSup()">
         Invite Supervisor
       </button>
+    </div>
+  </form>
+</div> -->
+
+<div fxLayout="row">
+  <form class="uk-grid-small" uk-grid>
+    <div class="uk-width-1-2@s">
+      <div class="uk-margin">
+        <div uk-form-custom="target: > * > span:first-child">
+          <select>
+            <option value="">Choose Supervisor</option>
+            <option value="1">Option 01</option>
+            <option value="2">Option 02</option>
+            <option value="3">Option 03</option>
+            <option value="4">Option 04</option>
+          </select>
+          <button
+            class="uk-button uk-button-default"
+            type="button"
+            tabindex="-1"
+          >
+            <span></span>
+            <span uk-icon="icon: chevron-down"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="uk-width-1-2@s">
+      <div class="uk-margin">
+        <div uk-form-custom="target: > * > span:first-child">
+          <select>
+            <option value="">Choose Project</option>
+            <option value="1">Option 01</option>
+            <option value="2">Option 02</option>
+            <option value="3">Option 03</option>
+            <option value="4">Option 04</option>
+          </select>
+          <button
+            class="uk-button uk-button-default"
+            type="button"
+            tabindex="-1"
+          >
+            <span></span>
+            <span uk-icon="icon: chevron-down"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div fxLayout="row">
+  <form class="uk-grid-small" uk-grid>
+    <h3>Invite New Supervisor</h3>
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Title</label>
+      <input class="uk-input" type="text" placeholder="100" />
+    </div>
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Full Name</label>
+      <input class="uk-input" type="text" placeholder="100" />
+    </div>
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Email</label>
+      <input class="uk-input" type="text" placeholder="100" />
+    </div>
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Occupation</label>
+      <input class="uk-input" type="text" placeholder="100" />
+    </div>
+    <div class="uk-width-1-1">
+      <label class="uk-form-label">Phone Number</label>
+      <input class="uk-input" type="text" placeholder="100" />
     </div>
   </form>
 </div>
