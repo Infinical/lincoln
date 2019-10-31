@@ -6,15 +6,10 @@ import { ViewProjectsComponent } from './view-projects/view-projects.component';
 import { InviteSupervisorComponent } from './invite-supervisor/invite-supervisor.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { ViewDetailsComponent } from './view-details/view-details.component';
-import { AuthModule } from './auth/auth.module';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./auth/auth.module').then(mod => mod.AuthModule)
-  },
-  {
-    path: 'home',
     component: AmbassadorComponent,
     children: [
       { path: 'new', component: CreateProjectComponent },

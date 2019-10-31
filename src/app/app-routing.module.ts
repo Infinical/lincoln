@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'amb', pathMatch: 'full' },
-  // {
-  //   path: 'app',
-  //   loadChildren: () =>
-  //     import('./pages/admin/auth/auth.module').then(mod => mod.AuthModule)
-  // },
+  { path: '', redirectTo: 'app', pathMatch: 'full' },
+  {
+    path: 'app',
+    loadChildren: () =>
+      import('./pages/auth/auth.module').then(mod => mod.AuthModule)
+  },
   {
     path: 'admin',
     loadChildren: () =>

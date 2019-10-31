@@ -33,17 +33,64 @@
   </form>
 </div> -->
 
-<div fxLayout="row">
-  <form class="uk-grid-small" uk-grid>
-    <div class="uk-width-1-2@s">
+<div class="uk-grid-medium uk-child-width-expand@s uk-text-center" uk-grid>
+  <div [formGroup]="addForm" fxLayout="row">
+    <div>
       <div class="uk-margin">
         <div uk-form-custom="target: > * > span:first-child">
-          <select>
+          <select formControlName="sup">
             <option value="">Choose Supervisor</option>
-            <option value="1">Option 01</option>
-            <option value="2">Option 02</option>
-            <option value="3">Option 03</option>
-            <option value="4">Option 04</option>
+            <option *ngFor="let sup of sups" [value]="sup.id">{{
+              sup.username
+            }}</option>
+          </select>
+          <button
+            class="uk-button uk-button-default"
+            type="button"
+            tabindex="-1"
+          >
+            <span></span>
+            <span uk-icon="icon: chevron-down"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="uk-margin">
+        <div uk-form-custom="target: > * > span:first-child">
+          <select formControlName="project">
+            <option value="">Choose Project</option>
+            <option *ngFor="let project of projects" [value]="project.id">{{
+              project.name
+            }}</option>
+          </select>
+          <button
+            class="uk-button uk-button-default"
+            type="button"
+            tabindex="-1"
+          >
+            <span></span>
+            <span uk-icon="icon: chevron-down"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button class="uk-button uk-button-primary" (click)="addSupervisor()">
+        Add Supervisor
+      </button>
+    </div>
+  </div>
+
+  <!-- <form class="uk-grid-small" uk-grid [formGroup]="addForm">
+    <div class="uk-width-1-2@s">
+      <div class="uk-margin">
+        <div uk-form-custom="target: > * > span:first-child">
+          <select formControlName="sup">
+            <option value="">Choose Supervisor</option>
+            <option *ngFor="let sup of sups" [value]="sup.id">{{
+              sup.username
+            }}</option>
           </select>
           <button
             class="uk-button uk-button-default"
@@ -59,12 +106,11 @@
     <div class="uk-width-1-2@s">
       <div class="uk-margin">
         <div uk-form-custom="target: > * > span:first-child">
-          <select>
+          <select formControlName="project">
             <option value="">Choose Project</option>
-            <option value="1">Option 01</option>
-            <option value="2">Option 02</option>
-            <option value="3">Option 03</option>
-            <option value="4">Option 04</option>
+            <option *ngFor="let project of projects" [value]="project.id">{{
+              project.name
+            }}</option>
           </select>
           <button
             class="uk-button uk-button-default"
@@ -77,9 +123,14 @@
         </div>
       </div>
     </div>
-  </form>
+
+    <button class="uk-button uk-button-primary" (click)="addSupervisor()">
+      Add Supervisor
+    </button>
+  </form> -->
 </div>
 
+<hr class="uk-divider-icon" />
 <div fxLayout="row">
   <form class="uk-grid-small" uk-grid>
     <h3>Invite New Supervisor</h3>

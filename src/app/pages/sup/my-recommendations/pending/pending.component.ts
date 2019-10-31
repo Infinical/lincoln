@@ -12,7 +12,10 @@ export class PendingComponent implements OnInit {
   constructor(private projectService: ProjectService, private router: Router) {}
 
   ngOnInit() {
-    this.projectService.fetchAllProjects().subscribe((response: any) => {
+    const payload = {
+      id: sessionStorage.getItem('id')
+    };
+    this.projectService.fetchAllProjects(payload).subscribe((response: any) => {
       this.projects = response.data;
     });
   }

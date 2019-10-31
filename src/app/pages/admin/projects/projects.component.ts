@@ -12,8 +12,8 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
-    this.projectService.fetchAllProjects().subscribe((response: any) => {
-      this.projects = response.data;
-    });
+    // this.projectService.fetchAllProjects().subscribe((response: any) => {
+    //   this.projects = response.data;
+    // });
   }
 }
