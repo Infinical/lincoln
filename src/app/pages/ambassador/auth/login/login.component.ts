@@ -48,6 +48,7 @@ export class LoginComponent implements OnInit {
         this.toastr.success(response.message);
         sessionStorage.setItem('id', response.data.user.id);
         sessionStorage.setItem('email', response.data.user.email);
+        sessionStorage.setItem('token',response.data.token)
         this.router.navigate(['amb/home']);
       },
       err => {

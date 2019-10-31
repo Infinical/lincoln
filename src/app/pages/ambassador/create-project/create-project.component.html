@@ -27,7 +27,7 @@
       </div>
 
       <div fxLayout="row" class="uk-width-1-1">
-        <div class="uk-margin">
+        <div class="uk-margin" fxFlex="50.">
           <clr-date-container>
             <label>Start Date</label>
             <input type="date" clrDate name="demo" formControlName="start" />
@@ -37,25 +37,29 @@
             <input type="date" clrDate name="demo" formControlName="end" />
           </clr-date-container>
         </div>
-      </div>
 
-      <div>
-        <label class="uk-form-label">Upload PDF/DOC of project</label>
-        <div class="js-upload uk-placeholder uk-text-center">
-          <span uk-icon="icon: cloud-upload"></span>
-          <span class="uk-text-middle"
-            >Attach binaries by dropping them here or</span
-          >
-          <div uk-form-custom>
-            <input type="file" multiple />
-            <span class="uk-link">selecting one</span>
+        <div class="uk-margin" uk-margin fxFlex="50">
+          <label class="uk-form-label">Choose File to Upload</label>
+          <div uk-form-custom="target: true">
+            <input type="file" (change)="onSelect($event.target.value)" />
+            <input
+              class="uk-input uk-form-width-medium"
+              type="text"
+              placeholder="Select file"
+              formControlName="attachment"
+              disabled
+            />
           </div>
+          <button class="uk-button uk-button-default">
+            Submit
+          </button>
         </div>
       </div>
     </div>
     <button
       class="uk-button uk-button-secondary uk-width-1-1"
       (click)="createProject()"
+      [disabled]="!this.projectForm.valid || loading"
     >
       Create Project
     </button>
