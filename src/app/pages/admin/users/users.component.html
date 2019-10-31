@@ -1,29 +1,26 @@
-
+<div class="title">
+  <h2>List of Users</h2>
+</div>
 <clr-datagrid [(clrDgSelected)]="selected">
-  <clr-dg-action-bar>
-    <div class="btn-group">
-      <button type="button" class="btn btn-sm btn-secondary">
-        <clr-icon shape="close"></clr-icon> Delete
-      </button>
-      <button type="button" class="btn btn-sm btn-secondary">
-        <clr-icon shape="plus"></clr-icon> Export
-      </button>
-    </div>
-  </clr-dg-action-bar>
-
   <clr-dg-column>ID</clr-dg-column>
   <clr-dg-column>Username</clr-dg-column>
   <clr-dg-column>Email</clr-dg-column>
   <clr-dg-column>Role</clr-dg-column>
   <clr-dg-column>View</clr-dg-column>
 
-
   <clr-dg-row *clrDgItems="let user of users" [clrDgItem]="user">
-
     <clr-dg-cell>{{ user.id }}</clr-dg-cell>
     <clr-dg-cell>{{ user.username }}</clr-dg-cell>
     <clr-dg-cell>{{ user.email }}</clr-dg-cell>
     <clr-dg-cell>{{ user.role }}</clr-dg-cell>
-    <clr-dg-cell><clr-icon shape="eye"></clr-icon></clr-dg-cell>
+    <clr-dg-cell
+      ><button
+        type="button"
+        class="btn btn-icon"
+        aria-label="eye"
+        (click)="getUserDetails(user.id)"
+      >
+        <clr-icon shape="eye"></clr-icon></button
+    ></clr-dg-cell>
   </clr-dg-row>
 </clr-datagrid>
