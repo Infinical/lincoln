@@ -30,7 +30,7 @@
     "@clr/icons": "2.3.0",
     "@clr/ui": "2.3.0",
     "@webcomponents/custom-elements": "^1.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-starrating": "^1.0.7",
     "ngx-loading": "^8.0.0",
     "ngx-toastr": "^11.1.2",
